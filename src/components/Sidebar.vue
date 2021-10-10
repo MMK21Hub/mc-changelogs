@@ -3,7 +3,7 @@
 <ul>
   <h3>21w37a</h3>
   <h3>21w38a</h3>
-  <h3>21w39a</h3>
+  <h3 selected>21w39a</h3>
   <h3>21w40a</h3>
 </ul>
 </nav>
@@ -35,6 +35,7 @@ nav ul {
 nav h3 {
   display: block;
   padding: .75em;
+  padding-left: 1.25em;
   cursor: pointer;
 }
 
@@ -43,6 +44,15 @@ nav h3:hover {
 }
 
 nav h3[selected] {
-  background: hsl(var(--bg-base), 31%);
+  background: hsl(var(--bg-base), 18%);
+  margin: 0 .5em;
+  padding: .75em .25em;
+  padding-left: .75em;
+  border-radius: 10px;
+}
+
+nav h3[disabled] {
+  color: hsl(0, 0%, 65%);
+  cursor: auto;
 }
 </style>
