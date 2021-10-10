@@ -1,21 +1,44 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import Sidebar from './components/Sidebar.vue'; 
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+<Sidebar>
+  
+</Sidebar>
+<HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
 <style>
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  --bg-base: 231, 15%;
+  --bg: hsl(var(--bg-base), 18%);
+  background: var(--bg);
+
+  font-family: sans-serif;
+  color: #f8f8f2;
+
+  display: flex;
+}
+
+#app > div {
+  padding: 1em;
+  flex-grow: 1;
+}
+
+#app > * {
+  background: var(--bg);
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-color: #7c7d83 var(--bg);
 }
 </style>
